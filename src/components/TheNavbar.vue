@@ -1,6 +1,6 @@
 27 lines (24 sloc) 646 Bytes
 <template>
-  <v-app-bar  class="navbar" color="white">
+  <v-app-bar  class="navbar" color="white" height="100px">
 <!--    <v-btn icon>-->
 <!--      <v-icon >fas fa-dragon</v-icon>-->
 <!--    </v-btn>-->
@@ -35,6 +35,7 @@ display: flex;
   justify-content: center;
   padding: 20px;
   max-height: 100px;
+  height: 100px;
 }
 .v-btn{
   text-transform: none;
