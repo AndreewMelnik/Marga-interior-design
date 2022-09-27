@@ -59,7 +59,7 @@ export default {
   color: #000;
   margin-bottom: 30px;
 
-}/
+}
 
 welcome-box p{
   line-height: 1.7;
