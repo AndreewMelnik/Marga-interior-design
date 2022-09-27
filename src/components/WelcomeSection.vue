@@ -7,8 +7,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo mollitia id ea ab in! Nam eligendi distinctio, vitae.</p>
             <p>Alias odit ipsam quas unde obcaecati molestiae consequatur numquam cupiditate perferendis facere, nulla nemo id, accusantium corrupti tempora.</p>
             <p class="welcome-sign">
-              <span class="welcome__sign-name">Bruce Smith</span>
-              <span class="welcome__sign-sign">Founder, CEO</span>
+              <span class="welcome__sign-name">Bruce Smith</span> <br/>
+              <span class="welcome__sign-sign">Founder, CEO</span> <br/>
               <img src="../assets/images/signature.svg" alt="Image">
             </p>
           </div>
@@ -32,6 +32,12 @@ export default {
 </script>
 
 <style scoped>
+.welcome{
+  padding: 9% 0;
+}
+.welcome-items{
+  display: flex;
+}
 .welcome-box{
   background: #fff;
   position: relative;
@@ -39,22 +45,41 @@ export default {
   margin-right: -60px;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 4rem;
-  height: 100%;
+  padding: 64px;
+  height: 730px;
   line-height: 1.7;
   color: #364d59 ;
   font-weight: 300;
   font-size: 1rem;
-  max-width: 33%;
+  max-width: 40%;
 }
+.welcome-box h2{
+  line-height: 1.2;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
+
+}
+
 welcome-box p{
   line-height: 1.7;
   color: #364d59;
   margin-bottom: 3rem;
+  font-family: "AcuminPro-Medium";
 }
 
+.welcome-sign{
+  padding-top: 30px;
+}
+.welcome__sign-name{
+  font-weight: 700;
+
+}
+.welcome__sign-sign{
+  font-weight: 400;
+}
 .welcome-sign img{
-  max-width: 100%;
+  max-width: 140px;
 }
 
 

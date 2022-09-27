@@ -45,5 +45,9 @@ export default {
   font-weight: 300;
 }
 
+.theme--light.v-application {
+  background: #d4d7dd;
+}
+
 
 </style>

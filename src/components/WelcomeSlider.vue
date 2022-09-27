@@ -1,7 +1,7 @@
 <template>
   <v-carousel
       cycle
-      height="800"
+      height="700"
       hide-delimiter-background
       show-arrows-on-hover
   >
@@ -47,5 +47,7 @@ export default {
 </script>
 
 <style scoped>
-
+.v-window__container{
+  width:700px
+}
 </style>
