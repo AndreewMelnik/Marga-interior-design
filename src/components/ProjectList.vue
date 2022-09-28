@@ -1,11 +1,11 @@
 <template>
   <v-card
-      class="mx-auto"
+      class="projects"
       max-width="1140"
       background-color="#d4d7dd"
   >
-    <div class="cards-title">
-      <h2>WHAT WE DO</h2>
+    <div class="projects-title">
+      <h2>OUR PROJECTS</h2>
     </div>
     <v-container fluid>
       <v-row dense>
@@ -15,16 +15,16 @@
             :cols="card.flex"
         >
           <v-card
-              max-width="350"
+              max-width="540"
           >
             <v-img
                 :src="card.src"
                 class="white--text align-end"
                 gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-                height="200px"
+
             ></v-img>
             <v-card-title v-text="card.title"></v-card-title>
-            <v-card-subtitle>Listen to your favorite artists and albums whenever and wherever, online and offline.
+            <v-card-subtitle> Melbourne, Australia
             </v-card-subtitle>
           </v-card>
         </v-col>
@@ -35,32 +35,28 @@
 
 <script>
 export default {
-  name: "CardList",
+  name: "ProjectList",
 
   data: () => ({
     cards: [
-      {title: 'Creative Stairs', src: '../assets/images/hero_1.jpg', flex: 4},
-      {title: 'Kitchen Design', src: '../assets/images/hero_1.jpg', flex: 4},
-      {title: 'Lamp Decoration', src: '../assets/images/hero_1.jpg', flex: 4},
-      {title: 'Interior Blueprint', src: '../assets/images/hero_1.jpg', flex: 4},
-      {title: 'Dinning Table', src: '../assets/images/hero_1.jpg', flex: 4},
-      {title: 'Modern Design', src: '../assets/images/hero_1.jpg', flex: 4},
+      {title: 'Creative Stairs', src: require ('../assets/images/img_1.jpg'), flex: 6},
+      {title: 'Kitchen Design', src: require ( '../assets/images/img_2.jpg'), flex: 6},
+      {title: 'Lamp Decoration', src: require ( '../assets/images/img_3.jpg'), flex: 6},
+      {title: 'Interior Blueprint', src: require ( '../assets/images/img_4.jpg'), flex: 6},
+
     ],
   }),
 }
 </script>
 
 <style scoped>
+
+.projects.v-card.v-sheet.theme--light{
+  margin: 0 auto;
+}
 .container {
   background-color: #d4d7dd;
   text-align: center;
-}
-
-.cards-title {
-  font-size: 13px;
-  background-color: #d4d7dd;
-  padding: 20px;
-  font-family: "AcuminPro-Medium";
 }
 
 .v-sheet.v-card:not(.v-sheet--outlined) {
@@ -70,13 +66,28 @@ export default {
 
 .v-card__title {
   margin-top: 10px;
-  justify-content: center;
+padding:0px
 }
 
 .v-card__subtitle {
   margin-top: 10px;
-  padding-bottom: 20px;
-  text-align: center;
+ padding: 0px;
+  text-align: left;
+}
+
+.projects-title {
+  font-size: 13px;
+  background-color: #d4d7dd;
+  padding: 20px;
+  font-family: "AcuminPro-Medium";
+}
+.col.col-6{
+  justify-content: center;
+  display: flex;
+}
+
+.theme--light.v-card{
+  background-color: #d4d7dd;
 }
 
 </style>

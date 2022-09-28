@@ -26,28 +26,28 @@
 export default {
   name: "WelcomeSlider",
 
-    inject: ['isScrollable', 'isMobile'],
-    data () {
-      return {
-        slides: [
-          {
-            src: require("../assets/images/about_1.jpg"),
-          },
-          {
-            src: require("../assets/images/about_2.jpg"),
-          },
-          {
-            src: require("../assets/images/about_3.jpg"),
-          }
-        ]
-      }
-    },
-  }
+  inject: ['isScrollable', 'isMobile'],
+  data() {
+    return {
+      slides: [
+        {
+          src: require("../assets/images/about_1.jpg"),
+        },
+        {
+          src: require("../assets/images/about_2.jpg"),
+        },
+        {
+          src: require("../assets/images/about_3.jpg"),
+        }
+      ]
+    }
+  },
+}
 
 </script>
 
 <style scoped>
-.v-window__container{
-  width:700px
+.v-window__container {
+  width: 700px
 }
 </style>
