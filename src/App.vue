@@ -3,6 +3,7 @@
     <TheNavbar/>
     <PreviewSlider/>
     <WelcomeSection/>
+    <CardList/>
   </v-app>
 </template>
 
@@ -10,6 +11,7 @@
 import TheNavbar from "@/components/TheNavbar";
 import PreviewSlider from "@/components/PreviewSlider";
 import WelcomeSection from "@/components/WelcomeSection";
+import CardList from "@/components/CardLIst";
 
 export default {
   name: 'App',
@@ -18,6 +20,7 @@ export default {
     TheNavbar,
     PreviewSlider,
     WelcomeSection,
+    CardList,
 
   },
 
