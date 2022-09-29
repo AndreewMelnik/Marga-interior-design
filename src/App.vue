@@ -5,6 +5,7 @@
     <WelcomeSection/>
     <CardList/>
     <ProjectList/>
+    <CaptionSlider/>
   </v-app>
 </template>
 
@@ -14,6 +15,7 @@ import PreviewSlider from "@/components/PreviewSlider";
 import WelcomeSection from "@/components/WelcomeSection";
 import CardList from "@/components/CardLIst";
 import ProjectList from "@/components/ProjectList";
+import CaptionSlider from "@/components/CaptionSlider";
 
 export default {
   name: 'App',
@@ -24,6 +26,7 @@ export default {
     WelcomeSection,
     CardList,
     ProjectList,
+    CaptionSlider,
   },
 
   data: () => ({

@@ -65,13 +65,13 @@ export default {
 }
 
 .v-card__title {
-  margin-top: 10px;
-padding:0px
+  margin-top: 30px;
+  padding:0px
 }
 
 .v-card__subtitle {
   margin-top: 10px;
- padding: 0px;
+  padding: 0px;
   text-align: left;
 }
 
@@ -84,6 +84,7 @@ padding:0px
 .col.col-6{
   justify-content: center;
   display: flex;
+  padding-bottom: 40px;
 }
 
 .theme--light.v-card{
