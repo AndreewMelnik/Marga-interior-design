@@ -6,6 +6,8 @@
     <CardList/>
     <ProjectList/>
     <CaptionSlider/>
+    <BlogCards/>
+    <TheFooter/>
   </v-app>
 </template>
 
@@ -16,6 +18,8 @@ import WelcomeSection from "@/components/WelcomeSection";
 import CardList from "@/components/CardLIst";
 import ProjectList from "@/components/ProjectList";
 import CaptionSlider from "@/components/CaptionSlider";
+import BlogCards from "@/components/BlogCards";
+import TheFooter from "@/components/TheFooter";
 
 export default {
   name: 'App',
@@ -27,6 +31,8 @@ export default {
     CardList,
     ProjectList,
     CaptionSlider,
+    BlogCards,
+    TheFooter,
   },
 
   data: () => ({
@@ -57,8 +63,22 @@ export default {
 
 .theme--light.v-application {
   background: #d4d7dd;
-
 }
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.aas{
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
+}
+
 
 
 </style>

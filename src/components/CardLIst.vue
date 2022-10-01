@@ -16,13 +16,15 @@
         >
           <v-card
               max-width="350"
+              class="d-flex flex-column align-center py-10 px-20"
+              color="white"
           >
-            <v-img
+            <img
                 :src="card.src"
                 class="white--text align-end"
-                gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-                height="200px"
-            ></v-img>
+                height="200px"/>
+
+
             <v-card-title v-text="card.title"></v-card-title>
             <v-card-subtitle>Listen to your favorite artists and albums whenever and wherever, online and offline.
             </v-card-subtitle>
@@ -34,17 +36,24 @@
 </template>
 
 <script>
+import stairs from '../assets/images/svg/stairs.png'
+import kitchen from '../assets/images/svg/kitchen.png'
+import lamp from '../assets/images/svg/lamp.png'
+import interior from '../assets/images/svg/interior.png'
+import table from '../assets/images/svg/table.png'
+import pantone from '../assets/images/svg/design.png'
+
 export default {
   name: "CardList",
 
   data: () => ({
     cards: [
-      {title: 'Creative Stairs', src: '../assets/images/hero_1.jpg', flex: 4},
-      {title: 'Kitchen Design', src: '../assets/images/hero_1.jpg', flex: 4},
-      {title: 'Lamp Decoration', src: '../assets/images/hero_1.jpg', flex: 4},
-      {title: 'Interior Blueprint', src: '../assets/images/hero_1.jpg', flex: 4},
-      {title: 'Dinning Table', src: '../assets/images/hero_1.jpg', flex: 4},
-      {title: 'Modern Design', src: '../assets/images/hero_1.jpg', flex: 4},
+      {title: 'Creative Stairs', src: stairs, flex: 4},
+      {title: 'Kitchen Design', src: kitchen, flex: 4},
+      {title: 'Lamp Decoration', src: lamp, flex: 4},
+      {title: 'Interior Blueprint', src: interior, flex: 4},
+      {title: 'Dinning Table', src: table, flex: 4},
+      {title: 'Modern Design', src: pantone, flex: 4},
     ],
   }),
 }
@@ -68,6 +77,10 @@ export default {
   box-shadow: none;
 }
 
+img.white--text.align-end{
+  max-width: 80px;
+  max-height:80px
+}
 .v-card__title {
   margin-top: 10px;
   justify-content: center;
@@ -78,5 +91,6 @@ export default {
   padding-bottom: 20px;
   text-align: center;
 }
+
 
 </style>

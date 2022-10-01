@@ -33,7 +33,7 @@ export default {
 .navbar{
 display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   max-height: 100px;
   height: 100px;
 }
