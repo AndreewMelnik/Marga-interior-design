@@ -5,7 +5,7 @@
     <WelcomeSection/>
     <CardList/>
     <ProjectList/>
-    <CaptionSlider/>
+<!--    <CaptionSlider/>-->
     <BlogCards/>
     <TheFooter/>
   </v-app>
@@ -17,7 +17,7 @@ import PreviewSlider from "@/components/PreviewSlider";
 import WelcomeSection from "@/components/WelcomeSection";
 import CardList from "@/components/CardLIst";
 import ProjectList from "@/components/ProjectList";
-import CaptionSlider from "@/components/CaptionSlider";
+// import CaptionSlider from "@/components/CaptionSlider";
 import BlogCards from "@/components/BlogCards";
 import TheFooter from "@/components/TheFooter";
 
@@ -30,7 +30,7 @@ export default {
     WelcomeSection,
     CardList,
     ProjectList,
-    CaptionSlider,
+    // CaptionSlider,
     BlogCards,
     TheFooter,
   },
