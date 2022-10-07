@@ -59,7 +59,29 @@
             >
               submit
             </v-btn>
+            <v-card
+                class=""
+                flat
+                tile
+            >
+              <v-card-title class="teal">
+                <strong class="subheading">Get connected with us on social networks!</strong>
+
+                <v-btn
+                    v-for="icon in icons"
+                    :key="icon"
+                    class="mx-4"
+                    dark
+                    icon
+                >
+                  <v-icon size="24px">
+                    {{ icon }}
+                  </v-icon>
+                </v-btn>
+              </v-card-title>
+            </v-card>
           </form>
+
     </v-row>
     </v-container>
   </v-footer>
@@ -77,6 +99,12 @@ export default {
   'Blog',
   'Contact Us',
   ],
+    icons: [
+      'mdi-facebook',
+      'mdi-twitter',
+      'mdi-linkedin',
+      'mdi-instagram',
+    ],
 }),
 }
 </script>
