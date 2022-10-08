@@ -37,6 +37,14 @@ display: flex;
   max-height: 100px;
   height: 100px;
 }
+.v-btn.v-btn--is-elevated.v-btn--has-bg.theme--light.v-size--default{
+background-color: white;
+  box-shadow: none;
+}
+a{
+  color: black !important;
+  text-decoration: none;
+}
 .v-btn{
   text-transform: none;
   font-family: "AcuminPro-Medium";

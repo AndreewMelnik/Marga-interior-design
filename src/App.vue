@@ -54,13 +54,6 @@ export default {
   margin-right: auto;
   margin-left: auto;
 }
-.aas{
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 30px;
-}
 
 
 

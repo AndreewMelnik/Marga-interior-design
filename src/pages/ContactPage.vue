@@ -1,15 +1,17 @@
 <template>
   <v-app>
-    <div class="contacts">
-      <h1 class="contacts">contacts</h1>
-    </div>
+    <preview-card
+        title="CONTACT US"
+        subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti similique, nesciunt."/>
   </v-app>
 
 </template>
 
 <script>
+import PreviewCard from "@/components/PreviewCard";
 export default {
-  name: "ContactPage"
+  name: "ContactPage",
+  components: {PreviewCard}
 }
 </script>
 

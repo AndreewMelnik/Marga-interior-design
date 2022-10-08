@@ -1,7 +1,8 @@
 <template>
 <v-app>
-  <PreviewCard/>
-  <div class="spacer"></div>
+  <preview-card
+      title="OUR PROJECTS"
+      subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti similique, nesciunt."/>
   <ProjectList/>
   <ProjectList/>
 </v-app>

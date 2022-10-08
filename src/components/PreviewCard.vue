@@ -1,15 +1,16 @@
 <template>
   <div class="card__container">
     <div class="card__box">
-      <h1>Our projects</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti similique, nesciunt.</p>
+      <h1>{{ title }}</h1>
+      <p>{{ subtitle }}</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "PreviewCard"
+  name: "PreviewCard",
+  props: ['title', 'subtitle'],
 }
 </script>
 
@@ -20,6 +21,7 @@ export default {
   min-height: 600px;
   background-size: cover;
   background-position: center center;
+  margin-bottom: 7rem;
 }
 .card__box {
   z-index: 2;
