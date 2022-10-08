@@ -6,15 +6,15 @@
 <!--    </v-btn>-->
 
     <v-spacer></v-spacer>
-    <v-btn text @click="scroll('home')">Home</v-btn>
-    <v-btn text @click="scroll('project')">Projects</v-btn>
-    <v-btn text @click="scroll('services')">Services</v-btn>
+    <v-btn><router-link to="/">Home</router-link></v-btn>
+    <v-btn><router-link to="/projects">Projects</router-link></v-btn>
+    <v-btn><router-link to="/services">Services</router-link></v-btn>
     <div class="logo">
       <span>marga</span>
     </div>
-    <v-btn text @click="scroll('about')">About</v-btn>
-    <v-btn text @click="scroll('blog')"> Blog</v-btn>
-    <v-btn text @click="scroll('contact')"> Contact</v-btn>
+    <v-btn><router-link to="/about">About</router-link></v-btn>
+    <v-btn><router-link to="/blog">Blog</router-link></v-btn>
+    <v-btn><router-link to="/contact">Contact</router-link></v-btn>
   </v-app-bar>
 </template>
 

@@ -26,7 +26,7 @@
 
 
             <v-card-title v-text="card.title"></v-card-title>
-            <v-card-subtitle>Listen to your favorite artists and albums whenever and wherever, online and offline.
+            <v-card-subtitle> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus in officia saepe veritatis?
             </v-card-subtitle>
           </v-card>
         </v-col>

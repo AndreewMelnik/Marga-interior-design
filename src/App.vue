@@ -1,28 +1,13 @@
 <template>
   <v-app>
     <TheNavbar/>
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
     <router-view/>
-
-    <PreviewSlider/>
-    <WelcomeSection/>
-    <CardList/>
-    <ProjectList/>
-<!--    <CaptionSlider/>-->
-    <BlogCards/>
     <TheFooter/>
   </v-app>
 </template>
 
 <script>
 import TheNavbar from "@/components/TheNavbar";
-import PreviewSlider from "@/components/PreviewSlider";
-import WelcomeSection from "@/components/WelcomeSection";
-import CardList from "@/components/CardLIst";
-import ProjectList from "@/components/ProjectList";
-// import CaptionSlider from "@/components/CaptionSlider";
-import BlogCards from "@/components/BlogCards";
 import TheFooter from "@/components/TheFooter";
 
 export default {
@@ -30,12 +15,6 @@ export default {
 
   components: {
     TheNavbar,
-    PreviewSlider,
-    WelcomeSection,
-    CardList,
-    ProjectList,
-    // CaptionSlider,
-    BlogCards,
     TheFooter,
   },
 

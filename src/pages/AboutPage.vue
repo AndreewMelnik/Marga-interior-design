@@ -1,7 +1,7 @@
 <template>
-<div class="about">
-  <h1>About</h1>
-</div>
+<v-app>
+
+</v-app>
 
 </template>
 

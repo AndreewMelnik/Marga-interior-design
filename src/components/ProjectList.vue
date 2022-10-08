@@ -4,9 +4,6 @@
       max-width="1140"
       background-color="#d4d7dd"
   >
-    <div class="projects-title">
-      <h2>OUR PROJECTS</h2>
-    </div>
     <v-container fluid>
       <v-row dense>
         <v-col
@@ -75,12 +72,6 @@ export default {
   text-align: left;
 }
 
-.projects-title {
-  font-size: 13px;
-  background-color: #d4d7dd;
-  padding: 20px;
-  font-family: "AcuminPro-Medium";
-}
 .col.col-6{
   justify-content: center;
   display: flex;
