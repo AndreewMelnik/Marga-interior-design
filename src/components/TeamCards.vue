@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="pb-16">
 
     <v-row justify="center">
       <div class="text">
@@ -20,7 +20,7 @@
           <img
               :src="card.src"
               class="white--text align-end"
-              height="200px"/>
+              height="260px"/>
 
           <div class="title">Founder</div>
           <v-card-title v-text="card.title"></v-card-title>

@@ -37,10 +37,12 @@
 
       </v-col>
 
-          <v-col>
+          <v-col     class="py-4 text-left"
+                     cols="6"
+                     sm="1">
 
           </v-col>
-          <form>
+          <form class="flex flex-wrap">
             <h3 class="footer-heading mb-4">Subscribe to Newsletter</h3>
             <v-text-field
                 background-color="white"
@@ -60,13 +62,11 @@
               submit
             </v-btn>
             <v-card
+                color="rgba(201,204,212)"
                 class=""
                 flat
                 tile
             >
-              <v-card-title class="teal">
-                <strong class="subheading">Get connected with us on social networks!</strong>
-
                 <v-btn
                     v-for="icon in icons"
                     :key="icon"
@@ -78,7 +78,6 @@
                     {{ icon }}
                   </v-icon>
                 </v-btn>
-              </v-card-title>
             </v-card>
           </form>
 
@@ -128,6 +127,10 @@ padding-bottom: 20px;
 }
 v-text-field{
   color: white;
+  max-width: 250px;
+}
+.v-input.theme--light.v-text-field.v-text-field--is-booted{
+  max-width: 250px;
 }
 
 /*.v-input__slot{*/
