@@ -20,6 +20,7 @@ import CardList from "@/components/CardLIst";
 import ProjectList from "@/components/ProjectList";
 import CaptionSlider from "@/components/CaptionSlider";
 import BlogCards from "@/components/BlogCards";
+
 export default {
   name: "HomePage",
 
