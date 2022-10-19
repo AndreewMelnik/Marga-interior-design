@@ -14,9 +14,9 @@
         <v-container fluid>
           <v-row dense>
             <v-col
-                v-for="card in cards"
+                v-for="card in paginatedData"
                 :key="card.title"
-                :cols="card.flex"
+                :cols=3
             >
               <v-card
                   max-width="255"
@@ -25,8 +25,8 @@
                   color="white"
 
               >
-                <v-card-subtitle v-text="card.published"></v-card-subtitle>
-                <v-card-title v-text="card.description"></v-card-title>
+                <v-card-title v-text="card.title"></v-card-title>
+                <v-card-subtitle v-text="card.body"></v-card-subtitle>
                 <v-card-title><a href="#" class="read-more">Read More</a></v-card-title>
               </v-card>
             </v-col>
@@ -35,8 +35,10 @@
       </v-card>
       <div class="text-center">
         <v-pagination
-            v-model="page"
-            :length="4"
+            v-model="pageNumber"
+            :length="5"
+
+            @input="nextPage"
             prev-icon="mdi-menu-left"
             next-icon="mdi-menu-right"
         ></v-pagination>
@@ -47,36 +49,40 @@
 
 <script>
 
-
 export default {
   name: "BlogCardsSection",
 
-  data: () => ({
-    cards: [
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-    ],
-    page: 1,
-  }),
+  data() {
+    return {
+      cards: [],
+      pageNumber: 1,
+      size: 16
+    };
+  },
+
+  mounted() {
+    this.fetchTodo()
+  },
+
+  methods: {
+    fetchTodo() {
+      this.axios.get('https://jsonplaceholder.typicode.com/posts')
+          .then(response => this.cards = response.data)
+    },
+    nextPage(page) {
+      this.pageNumber = page;
+    }
+  },
+  computed: {
+    paginatedData() {
+      const start = this.pageNumber * this.size - this.size,
+          end = start + this.size;
+      return this.cards.slice(start, end);
+    }
+  }
+
 }
+
 </script>
 
 <style scoped>
@@ -118,5 +124,20 @@ p {
   color: #000;
   text-decoration: none;
 }
-
+.v-card__title{
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.v-card__subtitle {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 16px;
+  line-height: 1.6rem;
+}
 </style>
