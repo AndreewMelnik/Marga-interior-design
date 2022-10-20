@@ -4,7 +4,7 @@
       class="pt-5 pb-5"
   >
     <v-container
-        class="pa-10">
+        class="pa-10 mr-0">
       <v-row
           justify="center"
       >
@@ -64,7 +64,7 @@
           </v-btn>
           <v-card
               color="rgba(201,204,212)"
-              class=""
+              class="pt-5"
               flat
               tile
           >
@@ -110,6 +110,9 @@ export default {
 </script>
 
 <style scoped>
+.flex.flex-wrap{
+  padding-left: 175px;
+}
 .about {
   font-size: 16px;
   padding-bottom: 20px;
