@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomePage from "@/pages/HomePage";
-import ProjectsPage from "@/pages/ProjectsPage";
-import ServicesPage from "@/pages/ServicesPage";
-import AboutPage from "@/pages/AboutPage";
-import BlogPage from "@/pages/BlogPage";
-import ContactPage from "@/pages/ContactPage";
+import HomePage from "@/views/Home";
+import ProjectsPage from "@/views/Projects";
+import ServicesPage from "@/views/Services";
+import AboutPage from "@/views/About";
+import BlogPage from "@/views/Blog";
+import ContactPage from "@/views/Contact";
 
 Vue.use(VueRouter)
 
@@ -17,7 +17,7 @@ const router = [
     },
     {
         path: '/Home',
-        component: () => import('./pages/HomePage')
+        component: () => import('./views/Home')
     },
     {
         path: '/projects',
