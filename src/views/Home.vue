@@ -7,7 +7,7 @@
       <h2>OUR PROJECTS</h2>
     </div>
     <ProjectList/>
-<!--    <CaptionSlider/>-->
+    <!--    <CaptionSlider/>-->
     <BlogCards/>
   </v-app>
 
