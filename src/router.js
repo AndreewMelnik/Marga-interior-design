@@ -13,11 +13,13 @@ Vue.use(VueRouter)
 const router = [
     {
         path: '/',
+        name:"Home",
         component: HomePage,
     },
     {
-        path: '/Home',
-        component: () => import('./views/Home')
+        path: '/Marga-interior-design/',
+        name:"Home",
+        component: HomePage,
     },
     {
         path: '/projects',

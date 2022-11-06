@@ -6,10 +6,11 @@
             cols="12"
             md="4"
         >
+          <!--      delete below :counter="10"-->
           <v-text-field
               v-model="firstname"
               :rules="nameRules"
-              :counter="10"
+
               label="First name"
               required
           ></v-text-field>
@@ -19,10 +20,11 @@
             cols="12"
             md="4"
         >
+<!--      delete below :counter="10"-->
           <v-text-field
               v-model="lastname"
               :rules="nameRules"
-              :counter="10"
+
               label="Last name"
               required
           ></v-text-field>
@@ -44,13 +46,14 @@
             md="8"
             class="fill-height 300"
         >
-          <v-text-field
+          <v-textarea
               v-model="message"
               :rules="messageRules"
               label="Write your message."
               required
-          ></v-text-field>
+          ></v-textarea>
           <v-btn
+              color="#43ab92"
               width="380"
               height="58"
               class="mt-4"
@@ -90,5 +93,14 @@ export default {
 </script>
 
 <style scoped>
+.container{
+  padding-bottom: 7rem;
+}
+.v-text-field{
+  background-color: white;
+  border-radius: 5px;
+  /*margin:4px;*/
+  padding:16px;
+}
 
 </style>

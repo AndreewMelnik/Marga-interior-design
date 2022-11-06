@@ -21,7 +21,7 @@ export default {
   min-height: 600px;
   background-size: cover;
   background-position: center center;
-  margin-bottom: 7rem;
+  margin-bottom: 6rem;
 }
 .card__box {
   z-index: 2;
