@@ -6,7 +6,7 @@
             cols="12"
             md="4"
         >
-          <!--      delete below :counter="10"-->
+  <!--    delete below :counter="10"-->
           <v-text-field
               v-model="firstname"
               :rules="nameRules"
@@ -93,6 +93,7 @@ export default {
 </script>
 
 <style scoped>
+
 .container{
   padding-bottom: 7rem;
 }
