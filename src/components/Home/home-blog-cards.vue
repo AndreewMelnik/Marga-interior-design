@@ -86,4 +86,8 @@ p{
     text-decoration: none;
   }
 
+    .read-more:hover {
+        color: #43ab92 !important;
+      }
+
 </style>

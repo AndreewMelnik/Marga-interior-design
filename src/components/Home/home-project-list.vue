@@ -18,7 +18,6 @@
                 :src="card.src"
                 class="white--text align-end"
                 gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-
             ></v-img>
             <v-card-title v-text="card.title"></v-card-title>
             <v-card-subtitle> Melbourne, Australia
@@ -82,4 +81,12 @@ export default {
   background-color: #d4d7dd;
 }
 
+.v-image{
+  transition: all 0.5s ease-in-out;
+}
+.v-image:hover{
+  transform: translateY(-25px);
+
+
+}
 </style>

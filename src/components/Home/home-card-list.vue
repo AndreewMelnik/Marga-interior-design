@@ -10,6 +10,9 @@
     <v-container fluid>
       <v-row dense>
         <v-col
+            data-aos="fade-up"
+            data-aos-delay=""
+            data-aos-duration="800"
             v-for="card in cards"
             :key="card.title"
             :cols="card.flex"
@@ -36,6 +39,7 @@
 </template>
 
 <script>
+import AOS from 'aos';
 import stairs from '../../assets/images/svg/stairs.png'
 import kitchen from '../../assets/images/svg/kitchen.png'
 import lamp from '../../assets/images/svg/lamp.png'
@@ -44,6 +48,7 @@ import table from '../../assets/images/svg/table.png'
 import pantone from '../../assets/images/svg/design.png'
 
 export default {
+
   name: "CardList",
 
   data: () => ({
@@ -57,6 +62,7 @@ export default {
     ],
   }),
 }
+AOS.init();
 </script>
 
 <style scoped>
@@ -90,6 +96,24 @@ img.white--text.align-end{
   margin-top: 10px;
   padding-bottom: 20px;
   text-align: center;
+}
+
+[data-aos][data-aos][data-aos-duration="800"], body[data-aos-duration="800"] [data-aos] {
+  transition-duration: .8s
+}
+
+[data-aos^=fade][data-aos^=fade] {
+  opacity: 0;
+  transition-property: opacity, transform
+}
+
+[data-aos^=fade][data-aos^=fade].aos-animate {
+  opacity: 1;
+  transform: translate(0)
+}
+
+[data-aos=fade-up] {
+  transform: translateY(100px)
 }
 
 

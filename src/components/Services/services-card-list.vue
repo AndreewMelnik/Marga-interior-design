@@ -10,14 +10,19 @@
     <v-container fluid>
       <v-row dense>
         <v-col
+            data-aos="fade-up"
+            data-aos-duration="800"
             v-for="card in cards"
             :key="card.title"
             :cols="card.flex"
+            :data-aos-delay="card.delay"
+
         >
           <v-card
               max-width="350"
               class="d-flex flex-column align-center py-10 px-20"
               color="white"
+
           >
             <img
                 :src="card.src"
@@ -48,12 +53,12 @@ export default {
 
   data: () => ({
     cards: [
-      {title: 'Creative Stairs', src: stairs, flex: 4},
-      {title: 'Kitchen Design', src: kitchen, flex: 4},
-      {title: 'Lamp Decoration', src: lamp, flex: 4},
-      {title: 'Interior Blueprint', src: interior, flex: 4},
-      {title: 'Dinning Table', src: table, flex: 4},
-      {title: 'Modern Design', src: pantone, flex: 4},
+      {title: 'Creative Stairs', src: stairs, flex: 4,  delay: 50},
+      {title: 'Kitchen Design', src: kitchen, flex: 4, delay: 100},
+      {title: 'Lamp Decoration', src: lamp, flex: 4, delay: 200},
+      {title: 'Interior Blueprint', src: interior, flex: 4, delay: 50},
+      {title: 'Dinning Table', src: table, flex: 4, delay: 100},
+      {title: 'Modern Design', src: pantone, flex: 4, delay: 200},
     ],
   }),
 }
@@ -92,5 +97,30 @@ img.white--text.align-end{
   text-align: center;
 }
 
+[data-aos][data-aos][data-aos-duration="800"], body[data-aos-duration="800"] [data-aos] {
+  transition-duration: .8s
+}
+[data-aos][data-aos][data-aos-delay="50"], body[data-aos-delay="50"] [data-aos] {
+  transition-delay: 50ms
+}
+[data-aos][data-aos][data-aos-delay="100"], body[data-aos-delay="100"] [data-aos] {
+  transition-delay: .1s
+}
+[data-aos][data-aos][data-aos-delay="200"].aos-animate, body[data-aos-delay="200"] [data-aos].aos-animate {
+  transition-delay: .2s
+}
+[data-aos^=fade][data-aos^=fade] {
+  opacity: 0;
+  transition-property: opacity, transform
+}
+
+[data-aos^=fade][data-aos^=fade].aos-animate {
+  opacity: 1;
+  transform: translate(0)
+}
+
+[data-aos=fade-up] {
+  transform: translateY(100px)
+}
 
 </style>

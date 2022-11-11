@@ -82,4 +82,10 @@ export default {
   background-color: #d4d7dd;
 }
 
+.v-image{
+  transition: all 0.5s ease-in-out;
+}
+.v-image:hover{
+  transform: translateY(-25px);
+}
 </style>

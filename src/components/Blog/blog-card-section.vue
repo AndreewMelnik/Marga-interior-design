@@ -61,14 +61,15 @@ export default {
   },
 
   mounted() {
-    this.fetchTodo()
+    // this.fetchTodo()
+    this.$store.dispatch("fetchCards")
   },
 
   methods: {
-    fetchTodo() {
-      this.axios.get('https://jsonplaceholder.typicode.com/posts')
-          .then(response => this.cards = response.data)
-    },
+    // fetchTodo() {
+    //   this.axios.get('https://jsonplaceholder.typicode.com/posts')
+    //       .then(response => this.cards = response.data)
+    // },
     nextPage(page) {
       this.pageNumber = page;
     }
@@ -123,6 +124,10 @@ p {
   padding-right: 20px;
   color: #000;
   text-decoration: none;
+}
+
+.read-more:hover {
+  color: #43ab92 !important;
 }
 .v-card__title{
   display: block;
