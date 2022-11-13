@@ -1,42 +1,67 @@
 27 lines (24 sloc) 646 Bytes
 <template>
-  <v-app-bar class="navbar" color="white" height="100px">
-    <!--    <v-btn icon>-->
-    <!--      <v-icon >fas fa-dragon</v-icon>-->
-    <!--    </v-btn>-->
+  <div class="app">
+    <v-navigation-drawer v-model="sidebar" app>
+      <v-list>
+        <v-list-item
+            v-for="item in menuItems"
+            :key="item.title"
+            :to="item.path">
+          <v-list-item-content>{{ item.title }}</v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
 
-    <v-spacer></v-spacer>
-    <v-btn>
-      <router-link to="/">Home</router-link>
-    </v-btn>
-    <v-btn>
-      <router-link to="/projects">Projects</router-link>
-    </v-btn>
-    <v-btn>
-      <router-link to="/services">Services</router-link>
-    </v-btn>
-    <div class="logo">
-      <span>marga</span>
-    </div>
-    <v-btn>
-      <router-link to="/about">About</router-link>
-    </v-btn>
-    <v-btn>
-      <router-link to="/blog">Blog</router-link>
-    </v-btn>
-    <v-btn>
-      <router-link to="/contact">Contact</router-link>
-    </v-btn>
-  </v-app-bar>
+    <v-app-bar class="navbar" color="white" height="100px" >
+      <span class="hidden-sm-and-up">
+        <v-app-bar-nav-icon @click="sidebar = !sidebar"></v-app-bar-nav-icon>
+        <div class="logo">
+               <router-link to="/" @click="sidebar = !sidebar">marga</router-link>
+        </div>
+      </span>
+        <v-toolbar-items class="hidden-xs-only align-center">
+          <v-btn>
+            <router-link to="/">Home</router-link>
+          </v-btn>
+          <v-btn>
+            <router-link to="/projects">Projects</router-link>
+          </v-btn>
+          <v-btn>
+           <router-link to="/services">Services</router-link>
+          </v-btn>
+          <div class="logo">
+           <router-link to="/">marga</router-link>
+          </div>
+          <v-btn>
+            <router-link to="/about">About</router-link>
+          </v-btn>
+          <v-btn>
+           <router-link to="/blog">Blog</router-link>
+          </v-btn>
+          <v-btn>
+           <router-link to="/contact">Contact</router-link>
+          </v-btn>
+        </v-toolbar-items>
+    </v-app-bar>
+  </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    scroll(refName) {
-      const element = document.getElementById(refName);
-      element.scrollIntoView({behavior: "smooth"});
-    },
+
+  data(){
+    return {
+      appTitle: 'marga',
+      sidebar: false,
+      menuItems: [
+        { title: 'Home', path: '/', name: 'Home' },
+        { title: 'Projects', path: '/projects', name: 'Projects' },
+        { title: 'Services', path: '/services', name: 'Services' },
+        { title: 'About', path: '/about', name: 'About' },
+        { title: 'Blog', path: '/blog', name: 'Blog' },
+        { title: 'Contact', path: '/contact', name: 'Contact' }
+      ]
+    }
   },
 };
 </script>
@@ -48,9 +73,10 @@ export default {
   padding: 10px;
   max-height: 100px;
   height: 100px;
+  width: 100%;
 }
 
-.v-btn.v-btn--is-elevated.v-btn--has-bg.theme--light.v-size--default {
+.v-btn.v-btn--is-elevated.v-btn--has-bg.theme--light.v-size--default{
   background-color: white;
   box-shadow: none;
 }
@@ -65,20 +91,25 @@ a {
   font-family: "AcuminPro-Medium";
 }
 
-.v-btn.v-size--default {
-  font-size: 16px;
-}
-
 .logo {
   font-family: "Acumin Pro Regular";
-  color: #43ab92;
   font-size: 32px;
   width: 300px;
   text-align: center;
 }
 
-.logo span {
+.logo a.router-link-active{
+  color: #43ab92 !important;
   vertical-align: super;
 }
+
+@media(max-width: 600px){
+  .v-toolbar__content{
+    width:100%;
+    padding:0px;
+  }
+}
+
+
 
 </style>

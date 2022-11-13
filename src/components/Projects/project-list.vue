@@ -4,6 +4,10 @@
       max-width="1140"
       background-color="#d4d7dd"
   >
+    <div class="projects-title">
+      <h2>OUR PROJECTS</h2>
+    </div>
+
     <v-container fluid>
       <v-row dense>
         <v-col
@@ -40,6 +44,10 @@ export default {
       {title: 'Kitchen Design', src: require ( '../../assets/images/img_2.jpg'), flex: 6},
       {title: 'Lamp Decoration', src: require ( '../../assets/images/img_3.jpg'), flex: 6},
       {title: 'Interior Blueprint', src: require ( '../../assets/images/img_4.jpg'), flex: 6},
+      {title: 'Creative Stairs', src: require ('../../assets/images/img_1.jpg'), flex: 6},
+      {title: 'Kitchen Design', src: require ( '../../assets/images/img_2.jpg'), flex: 6},
+      {title: 'Lamp Decoration', src: require ( '../../assets/images/img_3.jpg'), flex: 6},
+      {title: 'Interior Blueprint', src: require ( '../../assets/images/img_4.jpg'), flex: 6}
 
     ],
   }),
@@ -48,10 +56,10 @@ export default {
 
 <style scoped>
 
-.projects.v-card.v-sheet.theme--light{
+.projects{
   margin: 0 auto;
 }
-.container {
+.container{
   background-color: #d4d7dd;
   text-align: center;
 }
@@ -73,8 +81,8 @@ export default {
 }
 
 .col.col-6{
-  justify-content: center;
-  display: flex;
+  /*justify-content: center;*/
+  /*display: flex;*/
   padding-bottom: 40px;
 }
 
@@ -87,5 +95,11 @@ export default {
 }
 .v-image:hover{
   transform: translateY(-25px);
+}
+.projects-title {
+  font-size: 13px;
+  background-color: #d4d7dd;
+  padding: 20px;
+  font-family: "AcuminPro-Medium";
 }
 </style>

@@ -68,6 +68,7 @@ export default {
 .container {
   background-color: #d4d7dd;
   text-align: center;
+  padding: 2% 0 9% 0;
 }
 
 .cards-title {

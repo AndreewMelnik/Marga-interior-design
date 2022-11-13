@@ -45,9 +45,10 @@
         </v-col>
         <form class="flex flex-wrap">
           <h3 class="footer-heading mb-4">Subscribe to Newsletter</h3>
+          <v-toolbar class="rounded-sm">
           <v-text-field
+              class="pt-5"
               background-color="white"
-              height="55px"
               v-model="email"
               :error-messages="emailErrors"
               label="Enter E-mail"
@@ -57,11 +58,12 @@
           ></v-text-field>
 
           <v-btn
-              class="mr-4"
+              class="mr-4 ml-8"
               @click="submit"
           >
             submit
           </v-btn>
+          </v-toolbar>
           <v-card
               color="rgba(201,204,212)"
               class="pt-5"
