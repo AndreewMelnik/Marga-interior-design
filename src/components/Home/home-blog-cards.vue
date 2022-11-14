@@ -26,7 +26,7 @@
           >
             <v-card-subtitle v-text="card.published"></v-card-subtitle>
             <v-card-title v-text="card.description"></v-card-title>
-            <v-card-title><a href="#" class="read-more">Read More</a></v-card-title>
+            <v-card-title><a href="#" class="read-more">Read More </a></v-card-title>
           </v-card>
         </v-col>
       </v-row>
@@ -44,10 +44,10 @@ export default {
 
   data: () => ({
     cards: [
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
-      {published: 'Septermber 30, 2019', description: 'IUSTO QUOS VENIAM MAGNI TOTAM', flex: 3},
+      {published: 'Septermber 30, 2019', description: 'Lorem ipsum dolor sit amet, consectetur est!', flex: 3},
+      {published: 'Septermber 30, 2019', description: 'Lorem ipsum dolor sit amet, consectetur est!', flex: 3},
+      {published: 'Septermber 30, 2019', description: 'Lorem ipsum dolor sit amet, consectetur est!', flex: 3},
+      {published: 'Septermber 30, 2019', description: 'Lorem ipsum dolor sit amet, consectetur est!', flex: 3},
     ],
   }),
 }
@@ -73,21 +73,35 @@ p{
   max-width: 650px;
   color: rgba(0, 0, 0, 0.6);
 }
-.v-card__title{
-  font-size: 1rem
-;}
-  .read-more{
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
-    position: relative;
-    padding-right: 20px;
-    color: #000;
-    text-decoration: none;
-  }
 
-    .read-more:hover {
-        color: #43ab92 !important;
-      }
+.read-more {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  padding-right: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  color: #43ab92 !important;
+}
+.v-card__title{
+  display: block;
+  /*white-space: nowrap;*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 13px;
+  font-size: 14px;
+  /*text-transform: uppercase;*/
+}
+.v-card__subtitle {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 16px;
+  line-height: 1.6rem;
+}
 
 </style>

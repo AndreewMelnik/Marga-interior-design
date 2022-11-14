@@ -4,6 +4,7 @@
       height="800"
       hide-delimiter-background
       show-arrows-on-hover
+      @click="dialog = false"
   >
     <v-carousel-item
         v-for="(slide, i) in slides"
@@ -22,15 +23,17 @@
     <div class="slider__box">
       <h1>Design That Makes You Feel At Home</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti similique, nesciunt.</p>
-      <p><a href="#" class="btn">Contact Us</a></p>
+      <home-popup/>
     </div>
   </v-carousel>
 </template>
 btn-primary
 
 <script>
+import HomePopup from "@/components/Home/home-popup";
 export default {
   name: "PreviewSlider",
+  components: {HomePopup},
   inject: ['isScrollable', 'isMobile'],
   data() {
     return {
@@ -77,19 +80,6 @@ export default {
   margin-bottom: 3rem;
 }
 
-.btn {
-  color: #fff;
-  background-color: #43ab92;
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  user-select: none;
-  border: 1px solid #43ab92;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  text-decoration: none;
-}
+
 
 </style>

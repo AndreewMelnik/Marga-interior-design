@@ -110,12 +110,22 @@ export default {
 .container{
   padding-bottom: 7rem;
 }
+
 .v-text-field{
   background-color: white;
   border-radius: 5px;
   /*margin:4px;*/
   padding:16px;
 }
+
+li{
+  padding-bottom: 1rem;
+}
+
+.theme--light.v-btn{
+  color:white
+}
+
 .contact__box {
   background-color: white;
   padding: 3rem;
@@ -126,19 +136,19 @@ export default {
   font-size: 20px;
   margin-bottom: 30px;
 }
+
 .contact__info{
   list-style-type: none;
   padding-left: 2px;
 }
+
 .contact__info-text{
   font-size: 80%;
   text-transform: uppercase;
   font-weight: bold;
   color: black;
 }
-li{
-  padding-bottom: 1rem;
-}
+
 
 </style>
 

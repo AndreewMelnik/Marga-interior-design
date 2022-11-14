@@ -33,7 +33,7 @@
           </v-list-item>
         </v-col>
 
-        <form class="flex flex-wrap">
+        <form class="flex flex-wrap pa-3">
           <h3 class="footer-heading mb-6">Subscribe to Newsletter</h3>
           <v-toolbar class="rounded-sm pa-0 mb-6" >
                 <v-text-field
@@ -140,6 +140,9 @@ v-text-field {
 .btn {
   left: 20px;
   border-radius:2px;
+}
+.theme--light.v-btn{
+  color:white
 }
 header{
   width:410px;
