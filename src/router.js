@@ -1,47 +1,55 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomePage from "@/pages/HomePage";
-import ProjectsPage from "@/pages/ProjectsPage";
-import ServicesPage from "@/pages/ServicesPage";
-import AboutPage from "@/pages/AboutPage";
-import BlogPage from "@/pages/BlogPage";
-import ContactPage from "@/pages/ContactPage";
+import HomePage from "@/views/Home";
+// import ProjectsPage from "@/views/Projects";
+// import ServicesPage from "@/views/Services";
+// import AboutPage from "@/views/About";
+// import BlogPage from "@/views/Blog";
+// import ContactPage from "@/views/Contact";
 
 Vue.use(VueRouter)
 
+//Обычный вызов компонента: component: HomePage, Lazy Loading: component: () => import('./views/Home')
 
-const router = [
+let router = [
     {
         path: '/',
-        component: HomePage,
+        name:"Home",
+        component: HomePage
     },
     {
-        path: '/Home',
-        component: () => import('./pages/HomePage')
+        path: '/Marga-interior-design/',
+        name:"Home",
+        component: HomePage
     },
     {
         path: '/projects',
-        name:"Projects",
-        component: ProjectsPage},
+        name: "Projects",
+        component: () => import('./views/Projects.vue').then(m => m.default)
+    },
     {
         path: '/services',
         name:"Services",
-        component: ServicesPage},
+        component: () => import('./views/Services.vue').then(m => m.default)
+    },
     {
         path: '/about',
         name:"About",
-        component: AboutPage},
+        component: () => import('./views/About.vue').then(m => m.default)
+    },
     {
         path: '/blog',
         name:"Blog",
-        component: BlogPage},
+        component: () => import('./views/Blog.vue').then(m => m.default)
+    },
     {
         path: '/contact',
         name:"Contact",
-        component: ContactPage}
+        component: () => import('./views/Contact.vue').then(m => m.default)
+    }
 ]
 
-export default new VueRouter( {
+     export default new VueRouter( {
     mode: 'history',
     routes: router
     }
