@@ -4,7 +4,7 @@
       class="pt-5 pb-5"
   >
     <v-container
-
+        class="pa-10">
       <div class="row">
         <v-col class="about">
           <h3>About Us </h3>
