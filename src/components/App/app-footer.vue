@@ -10,6 +10,7 @@
           <h3>About Us </h3>
           <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
             blind texts.
+
           <p/>
         </v-col>
         <v-col
