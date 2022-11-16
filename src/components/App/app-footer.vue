@@ -167,6 +167,17 @@ header{
 /*  height: 55px;*/
 /*  background-color: #fff ;*/
 /*}*/
+
+@media (max-width:1280px) {
+  .row{
+    flex-wrap: nowrap;
+    column-gap: 85px;
+  }
+  .footer-link{
+    min-height: 35px;
+  }
+}
+
 </style>
 
 

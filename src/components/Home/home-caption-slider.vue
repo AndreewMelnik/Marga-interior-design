@@ -16,12 +16,12 @@
         :sign="slide.sign"
         :position="slide.position"
       />
-<!--      <v-row-->
-<!--          class="fill-height"-->
-<!--          align="center"-->
-<!--          justify="center"-->
-<!--        >-->
-<!--      </v-row>-->
+      <v-row
+          class="fill-height"
+          align="center"
+          justify="center"
+        >
+      </v-row>
     </v-carousel-item>
     <div class="slider__box">
       <h1>Design That Makes You Feel At Home</h1>
@@ -42,19 +42,19 @@ export default {
     return {
       slides: [
         {
-          title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus totam sit delectus earum facere ex ea sunt, eos?',
+          title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus totam sit delectus earum facere, eos?',
           sign: 'Mike Dorney',
           position: 'CEO and Co-Founder',
         },
         {
           title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus totam sit delectus earum facere ex ea sunt, eos?',
-          sign: 'Mike Dorney',
-          position: 'CEO and Co-Founder',
+          sign: 'Jack Dorney',
+          position: 'Co-Founder',
         },
         {
-          title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus totam sit delectus earum facere ex ea sunt, eos?',
-          sign: 'Mike Dorney',
-          position: 'CEO and Co-Founder',
+          title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus totam sit delectus earum facere ex ea, eos?',
+          sign: 'John Dorney',
+          position: 'CEO',
         },
       ]
     }

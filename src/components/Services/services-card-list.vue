@@ -8,10 +8,11 @@
       <h2>WHAT WE DO</h2>
     </div>
     <v-container fluid>
-      <v-row dense>
+      <v-row class="ma-3">
         <v-col
             data-aos="fade-up"
             data-aos-duration="800"
+            class="px-3"
             v-for="card in cards"
             :key="card.title"
             :cols="card.flex"

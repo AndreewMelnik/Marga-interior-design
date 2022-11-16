@@ -22,7 +22,7 @@
     </v-carousel-item>
     <div class="slider__box">
       <h1>Design That Makes You Feel At Home</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti similique, nesciunt.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti, nesciunt.</p>
       <home-popup/>
     </div>
   </v-carousel>
