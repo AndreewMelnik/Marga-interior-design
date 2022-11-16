@@ -4,13 +4,12 @@
       class="pt-5 pb-5"
   >
     <v-container
-        class="pa-10">
+
       <div class="row">
         <v-col class="about">
           <h3>About Us </h3>
           <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
             blind texts.
-
           <p/>
         </v-col>
         <v-col
