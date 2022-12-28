@@ -11,7 +11,7 @@
           <p class="welcome-sign">
             <span class="welcome__sign-name">Bruce Smith</span> <br/>
             <span class="welcome__sign-sign">Founder, CEO</span> <br/>
-            <img src="../../assets/images/signature.svg" alt="Image">
+            <img alt="Image" src="../../assets/images/signature.svg">
           </p>
         </div>
         <WelcomeSlider/>
@@ -65,7 +65,7 @@ export default {
 
 }
 
-welcome-box p {
+.welcome-box p {
   line-height: 1.7;
   color: #364d59;
   margin-bottom: 3rem;
@@ -89,5 +89,50 @@ welcome-box p {
   max-width: 140px;
 }
 
+
+@media (max-width: 850px) {
+  .welcome-box {
+    padding: 2.5rem;
+  }
+
+  .welcome-box h2 {
+    font-size: 2rem;
+  }
+
+  .welcome-box p {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .welcome-box {
+    padding: 1.5rem;
+  }
+
+  .welcome-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-box p {
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .welcome-box {
+    padding: 1.5rem;
+  }
+
+  .welcome-box h2 {
+    font-size: 1.3rem;
+  }
+
+  .welcome-box p {
+    font-size: 13px;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+  }
+}
 
 </style>

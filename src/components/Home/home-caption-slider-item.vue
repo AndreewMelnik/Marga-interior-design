@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <span class="quote quote-icon-wrap">
-     <img src="../../assets/images/svg/quotes.svg" alt=""/></span>
+     <img alt="" src="../../assets/images/svg/quotes.svg"/></span>
     <blockquote class="testimonial">
       <span class="quote quote-icon-wrap">
         <span class="icon-format_quote"></span>
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style scoped>
-.container{
+.container {
   max-width: 1140px;
   text-align: center;
   width: 100%;
@@ -31,26 +31,32 @@ export default {
   margin-right: auto;
   margin-left: auto;
 }
-blockquote{
+
+blockquote {
   max-width: 620px;
   margin: 0 auto;
 }
-p{
+
+p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
-img{
+
+img {
   max-width: 32px;
 }
-.title{
-  font-size: 1.5rem!important;
+
+.title {
+  font-size: 1.5rem !important;
   font-weight: 300;
   padding-bottom: 1rem;
 }
-cite{
+
+cite {
   font-style: italic;
 }
-.text-muted{
+
+.text-muted {
   font-weight: 300;
 }
 

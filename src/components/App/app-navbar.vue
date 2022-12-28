@@ -1,7 +1,7 @@
 27 lines (24 sloc) 646 Bytes
 <template>
   <div class="app">
-    <v-navigation-drawer v-model="sidebar" app>
+    <v-navigation-drawer v-model="sidebar" app class="hidden-sm-and-up">
       <v-list>
         <v-list-item
             v-for="item in menuItems"
@@ -12,36 +12,39 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar class="navbar" color="white" height="100px" >
-      <span class="hidden-sm-and-up">
+    <v-app-bar class="navbar" color="white" height="100px">
+      <v-col class="hidden-sm-and-up">
+        <span>
         <v-app-bar-nav-icon @click="sidebar = !sidebar"></v-app-bar-nav-icon>
+        </span>
         <div class="logo">
-               <router-link to="/" @click="sidebar = !sidebar">marga</router-link>
+          <router-link to="/" @click="sidebar = !sidebar">marga</router-link>
         </div>
-      </span>
-        <v-toolbar-items class="hidden-xs-only align-center">
-          <v-btn>
-            <router-link to="/">Home</router-link>
-          </v-btn>
-          <v-btn>
-            <router-link to="/projects">Projects</router-link>
-          </v-btn>
-          <v-btn>
-           <router-link to="/services">Services</router-link>
-          </v-btn>
-          <div class="logo">
-           <router-link to="/">marga</router-link>
-          </div>
-          <v-btn>
-            <router-link to="/about">About</router-link>
-          </v-btn>
-          <v-btn>
-           <router-link to="/blog">Blog</router-link>
-          </v-btn>
-          <v-btn>
-           <router-link to="/contact">Contact</router-link>
-          </v-btn>
-        </v-toolbar-items>
+      </v-col>
+
+      <v-toolbar-items class="hidden-xs-only align-center">
+        <v-btn>
+          <router-link to="/">Home</router-link>
+        </v-btn>
+        <v-btn>
+          <router-link to="/projects">Projects</router-link>
+        </v-btn>
+        <v-btn>
+          <router-link to="/services">Services</router-link>
+        </v-btn>
+        <div class="logo">
+          <router-link to="/">marga</router-link>
+        </div>
+        <v-btn>
+          <router-link to="/about">About</router-link>
+        </v-btn>
+        <v-btn>
+          <router-link to="/blog">Blog</router-link>
+        </v-btn>
+        <v-btn>
+          <router-link to="/contact">Contact</router-link>
+        </v-btn>
+      </v-toolbar-items>
     </v-app-bar>
   </div>
 </template>
@@ -49,17 +52,17 @@
 <script>
 export default {
 
-  data(){
+  data() {
     return {
       appTitle: 'marga',
       sidebar: false,
       menuItems: [
-        { title: 'Home', path: '/', name: 'Home' },
-        { title: 'Projects', path: '/projects', name: 'Projects' },
-        { title: 'Services', path: '/services', name: 'Services' },
-        { title: 'About', path: '/about', name: 'About' },
-        { title: 'Blog', path: '/blog', name: 'Blog' },
-        { title: 'Contact', path: '/contact', name: 'Contact' }
+        {title: 'Home', path: '/', name: 'Home'},
+        {title: 'Projects', path: '/projects', name: 'Projects'},
+        {title: 'Services', path: '/services', name: 'Services'},
+        {title: 'About', path: '/about', name: 'About'},
+        {title: 'Blog', path: '/blog', name: 'Blog'},
+        {title: 'Contact', path: '/contact', name: 'Contact'}
       ]
     }
   },
@@ -76,19 +79,28 @@ export default {
   width: 100%;
 }
 
-.v-btn.v-btn--is-elevated.v-btn--has-bg.theme--light.v-size--default{
+.v-btn.v-btn--is-elevated.v-btn--has-bg.theme--light.v-size--default {
   background-color: white;
   box-shadow: none;
+}
+
+.hidden-sm-and-up {
+  display: flex;
 }
 
 a {
   color: black !important;
   text-decoration: none;
+
 }
 
 .v-btn {
   text-transform: none;
   font-family: "AcuminPro-Medium";
+}
+
+.v-btn__content a {
+  font-size: 1rem;
 }
 
 .logo {
@@ -98,18 +110,31 @@ a {
   text-align: center;
 }
 
-.logo a.router-link-active{
+.logo a.router-link-active {
   color: #43ab92 !important;
   vertical-align: super;
 }
 
-@media(max-width: 600px){
-  .v-toolbar__content{
-    width:100%;
-    padding:0px;
+@media (max-width: 800px) {
+  .v-btn {
+    padding: 0 10px;
+  }
+
+  .v-btn__content a {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    width: 150px;
   }
 }
 
+@media (max-width: 600px) {
+  .v-toolbar__content {
+    width: 100%;
+    padding: 0px;
+  }
+}
 
 
 </style>

@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style scoped>
-.card__container{
+.card__container {
   background-image: url("/src/assets/images/hero_1.jpg");
   height: 100vh;
   min-height: 600px;
@@ -23,6 +23,7 @@ export default {
   background-position: center center;
   margin-bottom: 6rem;
 }
+
 .card__box {
   z-index: 2;
   background: #fff;
@@ -30,7 +31,7 @@ export default {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   max-width: 500px;
   text-align: center;
 }

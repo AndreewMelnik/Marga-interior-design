@@ -13,8 +13,8 @@
         transition="fade-transition"
     >
       <v-row
-          class="fill-height"
           align="center"
+          class="fill-height"
           justify="center"
       >
       </v-row>

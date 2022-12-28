@@ -1,7 +1,7 @@
 <template>
   <v-footer
-      color="#c9ccd4"
       class="pt-5 pb-5"
+      color="#c9ccd4"
   >
     <v-container
         class="pa-10">
@@ -21,41 +21,41 @@
             Features
           </h3>
           <v-list-item
-              class="footer-link"
               v-for="link in links"
               :key="link.name"
               :to="link.path"
-              text
-              rounded
+              class="footer-link"
               color="rgba(0, 0, 0, 0.5)"
+              rounded
+              text
           >
-            {{link.name}}
+            {{ link.name }}
           </v-list-item>
         </v-col>
 
         <form class="flex flex-wrap pa-3">
           <h3 class="footer-heading mb-6">Subscribe to Newsletter</h3>
-          <v-toolbar class="rounded-sm pa-0 mb-6" >
-                <v-text-field
-                    class="pt-5"
-                    background-color="white"
-                    v-model="email"
-                    :error-messages="emailErrors"
-                    label="Enter E-mail"
-                    required
-                    @input="$v.email.$touch()"
-                    @blur="$v.email.$touch()"
-                ></v-text-field>
+          <v-toolbar class="rounded-sm pa-0 mb-6">
+            <v-text-field
+                v-model="email"
+                :error-messages="emailErrors"
+                background-color="white"
+                class="pt-5"
+                label="Enter E-mail"
+                required
+                @blur="$v.email.$touch()"
+                @input="$v.email.$touch()"
+            ></v-text-field>
 
-                <v-btn
-                    class="btn"
-                    height="64px"
-                    width="125px"
-                    color="#43ab92"
-                    @click="submit"
-                >
-                  Subscribe
-                </v-btn>
+            <v-btn
+                class="btn"
+                color="#43ab92"
+                height="64px"
+                width="125px"
+                @click="submit"
+            >
+              Subscribe
+            </v-btn>
           </v-toolbar>
           <v-card
               color="rgba(201,204,212)"
@@ -70,7 +70,7 @@
                 icon
             >
               <v-icon size="24px">
-                {{icon}}
+                {{ icon }}
               </v-icon>
             </v-btn>
           </v-card>
@@ -86,13 +86,13 @@ export default {
   name: "TheFooter",
 
   data: () => ({
-      links: [
-        {name: 'About Us', path: '/about', },
-        {name: 'Projects', path: 'projects', },
-        {name: 'Services', path: '/services', },
-        {name: 'Blog', path: '/blog', },
-        {name: 'Contact Us', path: '/contact', }
-      ],
+    links: [
+      {name: 'About Us', path: '/about',},
+      {name: 'Projects', path: 'projects',},
+      {name: 'Services', path: '/services',},
+      {name: 'Blog', path: '/blog',},
+      {name: 'Contact Us', path: '/contact',}
+    ],
 
     icons: [
       'mdi-facebook',
@@ -123,12 +123,13 @@ export default {
   width: 247px;
 }
 
-.row{
-  display:flex;
+.row {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   column-gap: 160px;
 }
+
 .features {
   padding-bottom: 10px;
 }
@@ -137,21 +138,27 @@ v-text-field {
   color: white;
   max-width: 250px;
 }
+
 .btn {
   left: 20px;
-  border-radius:2px;
+  border-radius: 2px;
 }
-.theme--light.v-btn{
-  color:white
+
+.theme--light.v-btn {
+  color: white
 }
-header{
-  width:410px;
+
+header {
+  width: 410px;
 }
+
 .v-input.theme--light.v-text-field.v-text-field--is-booted {
   max-width: 250px;
+
 }
-.footer-link{
-  width:115px;
+
+.footer-link {
+  width: 115px;
   color: gray !important;
   font-size: 16px;
   font-family: "Acumin Pro Regular";
@@ -159,21 +166,14 @@ header{
   min-height: 40px;
 }
 
-/*.v-input__slot{*/
-/*  position: relative;*/
-/*  flex: 1 1 auto;*/
-/*  width: 1%;*/
-/*  margin-bottom: 0;*/
-/*  height: 55px;*/
-/*  background-color: #fff ;*/
-/*}*/
 
-@media (max-width:1280px) {
-  .row{
+@media (max-width: 1280px) {
+  .row {
     flex-wrap: nowrap;
     column-gap: 85px;
   }
-  .footer-link{
+
+  .footer-link {
     min-height: 35px;
   }
 }

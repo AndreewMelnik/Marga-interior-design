@@ -1,14 +1,14 @@
 <template>
-  <v-row justify="left"  >
+  <v-row justify="left">
     <v-dialog
         v-model="dialog"
         max-width="600px"
     >
-      <template v-slot:activator="{ on, attrs }" >
+      <template v-slot:activator="{ on, attrs }">
         <v-btn
             class="popup__btn"
-            left
             dark
+            left
             v-bind="attrs"
             v-on="on"
 
@@ -17,66 +17,63 @@
         </v-btn>
       </template>
       <v-form v-model="valid">
-        <v-container >
+        <v-container>
           <div class="popup__text">Contact Us</div>
           <v-row class="popup__row">
-            <v-col lg="8">
-              <v-row>
-                <v-col md="6">
-                  <!--    delete below :counter="10"-->
-                  <v-text-field
-                      v-model="firstname"
-                      :rules="nameRules"
+            <v-row>
+              <v-col md="6">
+                <!--    delete below :counter="10"-->
+                <v-text-field
+                    v-model="firstname"
+                    :rules="nameRules"
 
-                      label="First name"
-                      required
-                  ></v-text-field>
-                </v-col>
-                <v-col md="6">
-                  <!--      delete below :counter="10"-->
-                  <v-text-field
-                      v-model="lastname"
-                      :rules="nameRules"
+                    label="First name"
+                    required
+                ></v-text-field>
+              </v-col>
+              <v-col md="6">
+                <!--      delete below :counter="10"-->
+                <v-text-field
+                    v-model="lastname"
+                    :rules="nameRules"
 
-                      label="Last name"
-                      required
-                  ></v-text-field>
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col md="12">
-                  <v-text-field
-                      v-model="email"
-                      :rules="emailRules"
-                      label="E-mail"
-                      required
-                  ></v-text-field>
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col
-                    cols="2"
-                    md="12"
-                    class="fill-height 300"
+                    label="Last name"
+                    required
+                ></v-text-field>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col md="12">
+                <v-text-field
+                    v-model="email"
+                    :rules="emailRules"
+                    label="E-mail"
+                    required
+                ></v-text-field>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col
+                  class="fill-height 300"
+                  md="12"
+              >
+                <v-textarea
+                    v-model="message"
+                    :rules="messageRules"
+                    label="Write your message."
+                    required
+                ></v-textarea>
+                <v-btn
+                    class="mt-6"
+                    color="#43ab92"
+                    height="58"
+                    width="380"
+                    @click="submit"
                 >
-                  <v-textarea
-                      v-model="message"
-                      :rules="messageRules"
-                      label="Write your message."
-                      required
-                  ></v-textarea>
-                  <v-btn
-                      color="#43ab92"
-                      width="380"
-                      height="58"
-                      class="mt-6"
-                      @click="submit"
-                  >
-                    Send Message
-                  </v-btn>
-                </v-col>
-              </v-row>
-            </v-col>
+                  Send Message
+                </v-btn>
+              </v-col>
+            </v-row>
           </v-row>
         </v-container>
       </v-form>
@@ -85,18 +82,18 @@
 </template>
 
 <script>
-  export default {
-    name: "home-popup",
-    data: () => ({
-      dialog: false,
-    }),
-  }
+export default {
+  name: "home-popup",
+  data: () => ({
+    dialog: false,
+  }),
+}
 
 </script>
 
 <style scoped>
 
-.popup__btn{
+.popup__btn {
   justify-content: left !important;
   color: #fff;
   background-color: #43ab92 !important;
@@ -112,7 +109,8 @@
   line-height: 1.5;
   text-decoration: none;
 }
-.popup__text{
+
+.popup__text {
   text-transform: uppercase;
   margin-bottom: 30px;
   font-size: 25px;
@@ -121,32 +119,37 @@
   font-weight: 700;
 }
 
-.popup__row{
-  justify-content: center;
-}
 
-.container{
-  padding:45px 0 45px 0 ;
+.container {
+  padding: 45px;
   background-color: #fffffff7;
   overflow: hidden;
 }
 
-.v-text-field{
+.v-text-field {
   background-color: #ffffff1c;
   border-radius: 5px;
-  margin:4px;
+  margin: 4px;
   /*padding:16px;*/
 }
 
-li{
+li {
   padding-bottom: 1rem;
 }
 
-.theme--light.v-btn{
-  color:white
+.theme--light.v-btn {
+  color: white
 }
 
-.input-208{
+.input-208 {
   line-height: 1.5rem;
+}
+
+@media (max-width: 470px) {
+  .popup__btn {
+    padding: 0 8px !important;
+    height: 30px !important;
+    font-size: 12px;
+  }
 }
 </style>

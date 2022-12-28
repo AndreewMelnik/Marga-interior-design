@@ -7,9 +7,9 @@
           dolor id obcaecati!</p>
       </div>
       <v-card
+          background-color="#d4d7dd"
           class="mx-auto"
           max-width="1140"
-          background-color="#d4d7dd"
       >
         <v-container fluid>
           <v-row dense>
@@ -19,15 +19,15 @@
                 :cols=3
             >
               <v-card
-                  max-width="255"
-                  height="200"
                   class="d-flex flex-column align-left py-0 px-20 ml-3 mr-3 mb-9"
                   color="white"
+                  height="200"
+                  max-width="255"
 
               >
                 <v-card-title v-text="card.title"></v-card-title>
                 <v-card-subtitle v-text="card.body"></v-card-subtitle>
-                <v-card-title><a href="#" class="read-more">Read More</a></v-card-title>
+                <v-card-title><a class="read-more" href="#">Read More</a></v-card-title>
               </v-card>
             </v-col>
           </v-row>
@@ -38,9 +38,9 @@
             v-model="pageNumber"
             :length="5"
 
-            @input="nextPage"
-            prev-icon="mdi-menu-left"
             next-icon="mdi-menu-right"
+            prev-icon="mdi-menu-left"
+            @input="nextPage"
         ></v-pagination>
       </div>
     </div>
@@ -129,7 +129,8 @@ p {
 .read-more:hover {
   color: #43ab92 !important;
 }
-.v-card__title{
+
+.v-card__title {
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -138,6 +139,7 @@ p {
   font-size: 14px;
   text-transform: uppercase;
 }
+
 .v-card__subtitle {
   display: block;
   overflow: hidden;

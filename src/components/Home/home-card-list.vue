@@ -1,26 +1,26 @@
 <template>
   <v-card
+      background-color="#d4d7dd"
       class="mx-auto"
       max-width="1140"
-      background-color="#d4d7dd"
   >
     <div class="cards-title">
       <h2>WHAT WE DO</h2>
     </div>
-    <v-container fluid >
+    <v-container fluid>
       <v-row dense>
         <v-col
-            data-aos="fade-up"
-            data-aos-duration="800"
             v-for="card in cards"
             :key="card.title"
             :cols="card.flex"
             :data-aos-delay="card.delay"
+            data-aos="fade-up"
+            data-aos-duration="800"
         >
           <v-card
-              max-width="350"
               class="d-flex flex-column align-center py-10 px-20"
               color="white"
+              max-width="350"
           >
             <img
                 :src="card.src"
@@ -29,7 +29,8 @@
 
 
             <v-card-title v-text="card.title"></v-card-title>
-            <v-card-subtitle> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus in officia saepe veritatis?
+            <v-card-subtitle> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus in officia saepe
+              veritatis?
             </v-card-subtitle>
           </v-card>
         </v-col>
@@ -53,7 +54,7 @@ export default {
 
   data: () => ({
     cards: [
-      {title: 'Creative Stairs', src: stairs, flex: 4,  delay: 50},
+      {title: 'Creative Stairs', src: stairs, flex: 4, delay: 50},
       {title: 'Kitchen Design', src: kitchen, flex: 4, delay: 100},
       {title: 'Lamp Decoration', src: lamp, flex: 4, delay: 200},
       {title: 'Interior Blueprint', src: interior, flex: 4, delay: 50},
@@ -84,10 +85,11 @@ AOS.init();
   box-shadow: none;
 }
 
-img.white--text.align-end{
+img.white--text.align-end {
   max-width: 80px;
-  max-height:80px
+  max-height: 80px
 }
+
 .v-card__title {
   margin-top: 10px;
   justify-content: center;
@@ -102,15 +104,19 @@ img.white--text.align-end{
 [data-aos][data-aos][data-aos-duration="800"], body[data-aos-duration="800"] [data-aos] {
   transition-duration: .8s
 }
+
 [data-aos][data-aos][data-aos-delay="50"], body[data-aos-delay="50"] [data-aos] {
   transition-delay: 50ms
 }
+
 [data-aos][data-aos][data-aos-delay="100"], body[data-aos-delay="100"] [data-aos] {
   transition-delay: .1s
 }
+
 [data-aos][data-aos][data-aos-delay="200"].aos-animate, body[data-aos-delay="200"] [data-aos].aos-animate {
   transition-delay: .2s
 }
+
 [data-aos^=fade][data-aos^=fade] {
   opacity: 0;
   transition-property: opacity, transform

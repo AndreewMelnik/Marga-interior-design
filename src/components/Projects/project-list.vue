@@ -1,8 +1,8 @@
 <template>
   <v-card
+      background-color="#d4d7dd"
       class="projects"
       max-width="1140"
-      background-color="#d4d7dd"
   >
     <div class="projects-title">
       <h2>OUR PROJECTS</h2>
@@ -40,14 +40,14 @@ export default {
 
   data: () => ({
     cards: [
-      {title: 'Creative Stairs', src: require ('../../assets/images/img_1.jpg'), flex: 6},
-      {title: 'Kitchen Design', src: require ( '../../assets/images/img_2.jpg'), flex: 6},
-      {title: 'Lamp Decoration', src: require ( '../../assets/images/img_3.jpg'), flex: 6},
-      {title: 'Interior Blueprint', src: require ( '../../assets/images/img_4.jpg'), flex: 6},
-      {title: 'Creative Stairs', src: require ('../../assets/images/img_1.jpg'), flex: 6},
-      {title: 'Kitchen Design', src: require ( '../../assets/images/img_2.jpg'), flex: 6},
-      {title: 'Lamp Decoration', src: require ( '../../assets/images/img_3.jpg'), flex: 6},
-      {title: 'Interior Blueprint', src: require ( '../../assets/images/img_4.jpg'), flex: 6}
+      {title: 'Creative Stairs', src: require('../../assets/images/img_1.jpg'), flex: 6},
+      {title: 'Kitchen Design', src: require('../../assets/images/img_2.jpg'), flex: 6},
+      {title: 'Lamp Decoration', src: require('../../assets/images/img_3.jpg'), flex: 6},
+      {title: 'Interior Blueprint', src: require('../../assets/images/img_4.jpg'), flex: 6},
+      {title: 'Creative Stairs', src: require('../../assets/images/img_1.jpg'), flex: 6},
+      {title: 'Kitchen Design', src: require('../../assets/images/img_2.jpg'), flex: 6},
+      {title: 'Lamp Decoration', src: require('../../assets/images/img_3.jpg'), flex: 6},
+      {title: 'Interior Blueprint', src: require('../../assets/images/img_4.jpg'), flex: 6}
 
     ],
   }),
@@ -56,10 +56,11 @@ export default {
 
 <style scoped>
 
-.projects{
+.projects {
   margin: 0 auto;
 }
-.container{
+
+.container {
   background-color: #d4d7dd;
   text-align: center;
 }
@@ -71,7 +72,7 @@ export default {
 
 .v-card__title {
   margin-top: 30px;
-  padding:0px
+  padding: 0px
 }
 
 .v-card__subtitle {
@@ -80,22 +81,24 @@ export default {
   text-align: left;
 }
 
-.col.col-6{
+.col.col-6 {
   /*justify-content: center;*/
   /*display: flex;*/
   padding-bottom: 40px;
 }
 
-.theme--light.v-card{
+.theme--light.v-card {
   background-color: #d4d7dd;
 }
 
-.v-image{
+.v-image {
   transition: all 0.5s ease-in-out;
 }
-.v-image:hover{
+
+.v-image:hover {
   transform: translateY(-25px);
 }
+
 .projects-title {
   font-size: 13px;
   background-color: #d4d7dd;

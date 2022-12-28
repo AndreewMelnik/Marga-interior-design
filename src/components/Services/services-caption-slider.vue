@@ -12,21 +12,21 @@
         transition="fade-transition"
     >
       <caption-slider-item
-        :title="slide.title"
-        :sign="slide.sign"
-        :position="slide.position"
+          :position="slide.position"
+          :sign="slide.sign"
+          :title="slide.title"
       />
-<!--      <v-row-->
-<!--          class="fill-height"-->
-<!--          align="center"-->
-<!--          justify="center"-->
-<!--        >-->
-<!--      </v-row>-->
+      <!--      <v-row-->
+      <!--          class="fill-height"-->
+      <!--          align="center"-->
+      <!--          justify="center"-->
+      <!--        >-->
+      <!--      </v-row>-->
     </v-carousel-item>
     <div class="slider__box">
       <h1>Design That Makes You Feel At Home</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti similique, nesciunt.</p>
-      <p><a href="#" class="btn">Contact Us</a></p>
+      <p><a class="btn" href="#">Contact Us</a></p>
     </div>
   </v-carousel>
 </template>
@@ -34,6 +34,7 @@
 
 <script>
 import CaptionSliderItem from "@/components/Services/services-caption-slider-item";
+
 export default {
   name: "CaptionSlider",
   components: {CaptionSliderItem},

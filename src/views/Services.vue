@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <preview-card
-        title="OUR SERVICES"
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti similique, nesciunt."/>
+        subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti similique, nesciunt."
+        title="OUR SERVICES"/>
     <CardList/>
     <CaptionSlider/>
   </v-app>
@@ -13,6 +13,7 @@
 import PreviewCard from "@/components/Services/services-preview-card";
 import CardList from "@/components/Services/services-card-list";
 import CaptionSlider from "@/components/Services/services-caption-slider";
+
 export default {
   name: "ServicesPage",
 
@@ -20,7 +21,8 @@ export default {
     CaptionSlider,
     CardList,
     PreviewCard,
-  },}
+  },
+}
 
 </script>
 

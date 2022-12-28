@@ -37,9 +37,9 @@
           </v-row>
           <v-row>
             <v-col
+                class="fill-height 300"
                 cols="2"
                 md="12"
-                class="fill-height 300"
             >
               <v-textarea
                   v-model="message"
@@ -48,10 +48,10 @@
                   required
               ></v-textarea>
               <v-btn
-                  color="#43ab92"
-                  width="380"
-                  height="58"
                   class="mt-6"
+                  color="#43ab92"
+                  height="58"
+                  width="380"
                   @click="submit"
               >
                 Send Message
@@ -107,23 +107,23 @@ export default {
 
 <style scoped>
 
-.container{
+.container {
   padding-bottom: 7rem;
 }
 
-.v-text-field{
+.v-text-field {
   background-color: white;
   border-radius: 5px;
   /*margin:4px;*/
-  padding:16px;
+  padding: 16px;
 }
 
-li{
+li {
   padding-bottom: 1rem;
 }
 
-.theme--light.v-btn{
-  color:white
+.theme--light.v-btn {
+  color: white
 }
 
 .contact__box {
@@ -132,17 +132,17 @@ li{
   font-family: "Allrounder Grotesk Regular";
 }
 
-.contact__box h3{
+.contact__box h3 {
   font-size: 20px;
   margin-bottom: 30px;
 }
 
-.contact__info{
+.contact__info {
   list-style-type: none;
   padding-left: 2px;
 }
 
-.contact__info-text{
+.contact__info-text {
   font-size: 80%;
   text-transform: uppercase;
   font-weight: bold;

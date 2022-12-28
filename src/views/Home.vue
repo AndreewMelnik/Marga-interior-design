@@ -4,7 +4,7 @@
     <WelcomeSection/>
     <CardList/>
     <ProjectList/>
-        <CaptionSlider/>
+    <CaptionSlider/>
     <BlogCards/>
   </v-app>
 
@@ -44,4 +44,5 @@ export default {
   font-family: "AcuminPro-Medium";
   margin-left: 200px;
 }
+
 </style>

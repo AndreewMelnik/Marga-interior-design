@@ -1,23 +1,23 @@
 import axios from 'axios'
 
-export default{
-    state:{
-        cards:[]
+export default {
+    state: {
+        cards: []
     },
-    mutations:{
+    mutations: {
         setCards(state, payload) {
             state.cards = payload
         }
     },
-    getters:{
-        getAllCards(state){
+    getters: {
+        getAllCards(state) {
             return state.cards
         }
     },
-    actions:{
+    actions: {
         fetchCards(context) {
-                axios.get('https://jsonplaceholder.typicode.com/posts')
-                    .then(response => context.commit("setCards", response.data))
-            }
+            axios.get('https://jsonplaceholder.typicode.com/posts')
+                .then(response => context.commit("setCards", response.data))
+        }
     },
 }

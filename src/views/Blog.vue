@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <preview-card
-        title="BLOG POSTS"
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti similique, nesciunt."/>
+        subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti similique, nesciunt."
+        title="BLOG POSTS"/>
     <blog-cards-section/>
   </v-app>
 </template>

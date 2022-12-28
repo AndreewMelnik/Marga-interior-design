@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <preview-card
-        title="CONTACT US"
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti similique, nesciunt."/>
+        subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti similique, nesciunt."
+        title="CONTACT US"/>
     <contact-form/>
   </v-app>
 
@@ -11,9 +11,10 @@
 <script>
 import PreviewCard from "@/components/Contact/contact-preview-card";
 import ContactForm from "@/components/Contact/contact-form";
+
 export default {
   name: "ContactPage",
-  components: {PreviewCard,ContactForm}
+  components: {PreviewCard, ContactForm}
 }
 </script>
 

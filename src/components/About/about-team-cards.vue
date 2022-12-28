@@ -14,9 +14,9 @@
           :cols="card.flex"
       >
         <v-card
-            max-width="350"
             class="d-flex flex-column align-center py-10 px-20"
             color="white"
+            max-width="350"
         >
           <img
               :src="card.src"
